@@ -76,7 +76,7 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ContactUdateRequest $request, $id)
+    public function update(ContactRequest $request, $id)
     {
         $model = Contact::find($id);
        $model->name = $request->name;
