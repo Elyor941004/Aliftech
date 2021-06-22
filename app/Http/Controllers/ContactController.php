@@ -38,7 +38,7 @@ class ContactController extends Controller
     public function store(ContactRequest $request)
     {
        $model = new Contact();
-       $model->name = $request->text;
+       $model->name = $request->name;
        $model->phone = $request->phone;
        $model->email = $request->email;
        $model->save();
@@ -78,7 +78,7 @@ class ContactController extends Controller
     public function update(ContactRequest $request, $id)
     {
         $model = Contact::find($id);
-       $model->name = $request->text;
+       $model->name = $request->name;
        $model->phone = $request->phone;
        $model->email = $request->email;
        $model->save();
