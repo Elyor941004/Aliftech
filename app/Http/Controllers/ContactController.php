@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
-use App\Http\Requests\ContactUdateRequest;
+use App\Http\Requests\ContactUpdateRequest;
 use App\Models\Contact;
 
 class ContactController extends Controller
@@ -76,7 +76,7 @@ class ContactController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ContactRequest $request, $id)
+    public function update(ContactUpdateRequest $request, $id)
     {
         $model = Contact::find($id);
        $model->name = $request->name;
