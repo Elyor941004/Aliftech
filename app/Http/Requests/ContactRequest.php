@@ -24,7 +24,7 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|distinct',
+            'name'=>'required|distinct|unique:contact,name',
             'phone.*'=>'required|distinct',
             'email.*'=>'required|distinct',
         ];
